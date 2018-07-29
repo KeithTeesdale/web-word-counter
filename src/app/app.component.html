@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container" style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <br />
+  <form [formGroup]="angularForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label class="center-block">Counted Words: {{ count }}</label>
+      <br />
+      <textarea class="center-block" formControlName="text" rows="10" cols="75"></textarea>
+    </div>
+    <div *ngIf="!angularForm.pristine && angularForm.controls['text'].invalid" class="alert alert-danger">
+            Sorry, I can't count that. Please add some words!
+    </div>
+    <button type="submit" [disabled]="angularForm.pristine || angularForm.invalid" class="btn btn-success">Count Words</button>
+  </form>
+</div>
