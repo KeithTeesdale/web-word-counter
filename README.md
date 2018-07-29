@@ -1,7 +1,13 @@
 # Web Word-Counter
 You write words and we count them... on the web!
 
-## Development server
+## Install
+Install Node and NPM: https://nodejs.org/en/download/
+
+Run `npm install -g @angular/cli` to install the Angular CLI globally
+
+
+## Running The Development server
 
 Run `ng serve --open` to start dev server and automatically navigate to the application `http://localhost:4200/`.
 
